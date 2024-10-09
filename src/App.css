@@ -25,6 +25,44 @@
   border-bottom: none; /* Remove bottom border from the last row */
 }
 
+.problem-sol-board{
+  display: flex;
+  gap: 4rem;
+}
+
+.sudoku-table-sol {
+  border-collapse: collapse;
+   /* You can adjust the size */
+   width: 412px;
+   height: 412px;
+}
+
+.sudoku-table-sol td {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sudoku-table-sol .vertical-separator {
+  border-left: 5px solid rgb(40, 40, 40); /* Thicker left border for separation */
+}
+
+.sudoku-table-sol tr:nth-child(3n) td {
+  border-bottom: 5px solid rgb(40, 40, 40); /* Thicker bottom border for separation every 3 rows */
+}
+
+.sudoku-table-sol tr:last-child td {
+  border-bottom: none;
+}
+
+.sudoku-table-sol td {
+  background-color: #121212; /* Light background for cells */
+}
+
 input {
   border: none; /* Remove input border */
   outline: none; /* Remove input outline on focus */

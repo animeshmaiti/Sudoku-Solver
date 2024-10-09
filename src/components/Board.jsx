@@ -1,15 +1,12 @@
-import React, { useRef, useState } from 'react';
-import { useGetSolution } from './hooks/useGetSolution';
+import React, {useState, useRef } from 'react';
 
-export const Board = () => {
+export const Board = ({onSolve}) => {
   const [matrix, setMatrix] = useState(
     Array(9)
-      .fill()
-      .map(() => Array(9).fill(''))
-  );
+        .fill()
+        .map(() => Array(9).fill(''))
+);
   const inputRefs = useRef([]);
-  const getSolution = useGetSolution();
-
   // Handle input change
   const handleInputChange = (rowIndex, colIndex, value) => {
     // Only accept digits 0-9
@@ -25,17 +22,10 @@ export const Board = () => {
     }
   };
 
-  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Submitted Matrix:', matrix);
-    // Here you can send the matrix to your backend
-    getSolution(matrix).then((solution) => {
-      console.log('Solution:', solution);
-    //   if (solution) {
-    //     setMatrix(solution);
-    //   }
-    });
+    onSolve(matrix);
   };
 
   return (
