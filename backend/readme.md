@@ -8,7 +8,7 @@ This is a simple sudoku solver that uses a backtracking algorithm to solve the p
 
 ### Install `crow` library
 
-1. goto the [release section](https://github.com/nlohmann/json/releases)
+1. goto the [release section](https://github.com/CrowCpp/Crow/releases/tag/v1.2.0)
 2. Download `Crow-1.2.0.zip` file and extract it.
  ```bash
    unzip Crow-1.2.0.zip
